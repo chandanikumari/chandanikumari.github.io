@@ -26,4 +26,14 @@ rbenv global 2.6.6
 gem install bundler:1.16.1
 
 
+# Configure GitHub
+git config --global user.email '16663673+chandanikumari@users.noreply.github.com'
+git config --global user.name 'Chandani Kumari'
+#Configuring a New SSH Key and Add Your Public Key to GitHub
+eval `ssh-agent -s`
+ssh-keygen -t rsa -C "16663673+chandanikumari@users.noreply.github.com" # go with the default settings
+#Add your new key to the ssh-agent
+ssh-add ~/.ssh/id_rsa
+# Take output of below command and add in github->account settings->SSH keys->add SSh key
+cat ~/.ssh/id_rsa.pub
 
